@@ -104,6 +104,11 @@ button:disabled {
     font-weight: bold;
 }
 
+.character-row.checked {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* 발견된 Gem 리스트 스타일 */
 .gem-list {
     margin-left: 20px; /* Indent the list */

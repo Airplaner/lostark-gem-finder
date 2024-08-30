@@ -129,6 +129,7 @@ function raiseCharacterNotFound(characterName) {
 // Mark the character row as checked
 function markCharacterRow(characterName, text) {
     const characterRow = document.getElementById(`row-${characterName}`);
+    characterRow.classList.add("checked")
     const checkMark = document.createElement("span");
     checkMark.className = "check-mark";
     checkMark.innerHTML = text;
