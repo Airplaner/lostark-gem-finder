@@ -2,6 +2,24 @@
 const SERVER_DOMAIN = "https://developer-lostark.game.onstove.com";
 let API_KEY = "";  // This will be set from the user's input
 
+// Function to save API Key to localStorage
+function saveApiKey(apiKey) {
+    localStorage.setItem('apiKey', apiKey);
+}
+
+// Function to get API Key from localStorage
+function getApiKey() {
+    return localStorage.getItem('apiKey');
+}
+
+// Load saved API Key into input field on page load
+window.onload = function() {
+    const savedApiKey = getApiKey();
+    if (savedApiKey) {
+        document.getElementById('apiKey').value = savedApiKey;
+    }
+}
+
 // Function to check if a gem is Tier 3
 function isT3(gemName) {
     return gemName.includes("홍염") || gemName.includes("멸화");
@@ -45,6 +63,7 @@ async function fetchGems(mainCharacterName) {
         // Fetch sibling characters
         let response = await fetch(`${SERVER_DOMAIN}/characters/${mainCharacterName}/siblings`, { headers });
         if (!response.ok) throw new Error("Failed to fetch sibling characters.");
+        saveApiKey(API_KEY)
 
         let siblings = await response.json();
         if (siblings.length == 0) {
