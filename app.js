@@ -40,7 +40,9 @@ document.getElementById('gemForm').addEventListener('submit', function (event) {
     // Disable the button and show the spinner
     const findGemsButton = document.getElementById('findGemsButton');
     const spinner = document.getElementById('spinner');
+    const buttonText = document.getElementById('buttonText');
     findGemsButton.disabled = true;
+    buttonText.style.display = 'none';
     spinner.style.display = 'block';
 
     // Clear previous results
@@ -51,6 +53,7 @@ document.getElementById('gemForm').addEventListener('submit', function (event) {
         // Re-enable the button and hide the spinner after the operation
         findGemsButton.disabled = false;
         spinner.style.display = 'none';
+        buttonText.style.display = 'block';
     });
 });
 

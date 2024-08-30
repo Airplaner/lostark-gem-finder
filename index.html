@@ -16,10 +16,12 @@
             <label for="characterName">캐릭터명:</label>
             <input type="text" id="characterName" name="characterName" required>
 
-            <button type="submit" id="findGemsButton">실행</button>
+            <button type="submit" id="findGemsButton">
+                <span id="buttonText">실행</span>
+                <div id="spinner" class="spinner"></div>
+            </button>
 
             <!-- Loading spinner -->
-            <div id="spinner" class="spinner" style="display: none;"></div>
         </form>
 
         <div id="resultBox" class="result-box">
