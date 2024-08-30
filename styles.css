@@ -67,6 +67,7 @@ button:hover {
     /* 스크롤 제거, height 제한 없애기 */
     max-height: none;
     overflow: visible;
+    display: none;
 }
 
 .gem-info {

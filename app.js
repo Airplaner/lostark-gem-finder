@@ -106,6 +106,8 @@ async function fetchGems(mainCharacterName) {
 // Create a row for each character
 function createCharacterRow(characterName) {
     const resultBox = document.getElementById("resultBox");
+    resultBox.style.display = "block";
+
     const characterRow = document.createElement("div");
     characterRow.className = "character-row";
     characterRow.id = `row-${characterName}`;
@@ -115,6 +117,8 @@ function createCharacterRow(characterName) {
 
 function raiseCharacterNotFound(characterName) {
     const resultBox = document.getElementById("resultBox");
+    resultBox.style.display = "block";
+
     const errorRow = document.createElement("div");
     errorRow.className = "error-row";
     errorRow.id = "error-row";
