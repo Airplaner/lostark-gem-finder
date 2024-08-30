@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨어있는 보석 찾기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>숨어있는 보석 찾기</h1>
+        <form id="gemForm">
+            <label for="apiKey">API 키:</label>
+            <input type="text" id="apiKey" name="apiKey" required>
+
+            <label for="characterName">캐릭터명:</label>
+            <input type="text" id="characterName" name="characterName" required>
+
+            <button type="submit" id="findGemsButton">실행</button>
+
+            <!-- Loading spinner -->
+            <div id="spinner" class="spinner" style="display: none;"></div>
+        </form>
+
+        <div id="resultBox" class="result-box">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
