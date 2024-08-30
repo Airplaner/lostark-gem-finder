@@ -100,8 +100,11 @@ button:disabled {
 /* 각 캐릭터를 위한 행 스타일 */
 .character-row {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
     font-weight: bold;
+}
+
+.character-row:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Border-bottom for rows except the last one */
 }
 
 .character-row.checked {
