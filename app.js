@@ -25,6 +25,11 @@ function isT3(gemName) {
     return gemName.includes("홍염") || gemName.includes("멸화");
 }
 
+// Function to check if a gem is Tier 4
+function isT4(gemName) {
+    return gemName.includes("겁화") || gemName.includes("작열");
+}
+
 // Function to check if a gem is an event gem
 function isEvent(gemName) {
     return gemName.includes("귀속");
@@ -92,7 +97,11 @@ async function fetchGems(mainCharacterName) {
                 continue;
             }
 
-            let foundGems = gemsData.Gems.filter(gem => gem.Level <= 7 && isT3(gem.Name) && !isEvent(gem.Name));
+            let foundGems = gemsData.Gems.filter(
+                gem => ((
+                    gem.Level <= 7 && isT3(gem.Name) || (gem.Level <= 6 && isT4(gem.Name))
+                ) && !isEvent(gem.Name))
+            );
 
             if (foundGems.length > 0) {
                 displayGems(characterName, foundGems);
