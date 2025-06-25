@@ -1,7 +1,7 @@
 # lostark-gem-finder
 https://airplaner.github.io/lostark-gem-finder/
 
-원정대 내 전투 레벨 50 이상의 캐릭터들이 착용 중인 **거래 가능한 7레벨 이하의 3T 보석**을 찾아줍니다.
+원정대 내 전투 레벨 50 이상의 캐릭터들이 착용 중인 **거래 가능한 7레벨 이하의 3T 보석**과 **6레벨 이하의 4T 보석**을 찾아줍니다.
 
 ![image](https://github.com/user-attachments/assets/7264ca36-183c-4add-b275-b691b7e22eae)
 
